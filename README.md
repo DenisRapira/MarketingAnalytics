@@ -19,7 +19,7 @@ Marketing Analytics превращает сырые выгрузки социа�
 
 ## Как это работает
 
-![Сценарий работы](docs/screenshots/workflow.png)
+![Сценарий работы](docs/screenshots/Marketing Health.png)
 
 1. Укажите название компании для отчёта.
 2. Перетащите выгрузку YouTube, VK, Telegram или другой маркетинговой платформы.
