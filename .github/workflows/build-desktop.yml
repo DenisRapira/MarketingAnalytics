@@ -7,7 +7,7 @@ on:
       - "v*"
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
@@ -48,3 +48,14 @@ jobs:
           name: MarketingAnalytics-win-x64
           path: dist\MarketingAnalytics-win-x64.zip
           if-no-files-found: error
+
+      - name: Create GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: >
+          gh release create "$env:RELEASE_TAG"
+          "dist\MarketingAnalytics-win-x64.zip#Marketing Analytics for Windows x64"
+          --title "Marketing Analytics $env:RELEASE_TAG"
+          --generate-notes
