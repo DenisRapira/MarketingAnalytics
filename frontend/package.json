@@ -1,0 +1,18 @@
+{
+  "name": "social-metrics-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^14.2.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "react-dropzone": "^14.2.3",
+    "chart.js": "^4.4.0",
+    "react-chartjs-2": "^5.2.0"
+  }
+}

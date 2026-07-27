@@ -1,0 +1,37 @@
+# Local environments and generated dependencies
+frontend/node_modules/
+frontend/.next/
+backend/.venv/
+backend/__pycache__/
+backend/.matplotlib/
+backend/charts/
+backend/uploads/
+backend/reports/
+
+# Local report data and logs
+backend/*.log
+backend/*.err
+backend/*.out
+backend/*.pdf
+backend/vk.json
+frontend/*.log
+frontend/*.err
+frontend/*.out
+frontend/public/trackdrive-*.jpg
+frontend/public/trackdrive-*.png
+tmp/
+
+# Build outputs and desktop packages
+build/
+dist/
+desktop-webview2/bin/
+desktop-webview2/obj/
+installer/output/
+
+# Editor and OS files
+.vs/
+.vscode/
+*.user
+*.suo
+Thumbs.db
+Desktop.ini

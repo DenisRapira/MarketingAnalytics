@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>MarketingAnalytics</AssemblyName>
+    <RootNamespace>SocialMetrics.Desktop</RootNamespace>
+    <ApplicationIcon>Assets\marketing.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2739.15" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\marketing.ico" />
+    <Content Include="Assets\marketing-logo.jpg" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>
