@@ -40,13 +40,18 @@ jobs:
         run: powershell -ExecutionPolicy Bypass -File scripts\publish-desktop.ps1
 
       - name: Archive package
-        run: Compress-Archive -Path dist\MarketingAnalytics\* -DestinationPath dist\MarketingAnalytics-win-x64.zip
+        run: |
+          Compress-Archive -Path dist\MarketingAnalytics\* -DestinationPath dist\MarketingAnalytics-win-x64.zip
+          $hash = (Get-FileHash -Algorithm SHA256 dist\MarketingAnalytics-win-x64.zip).Hash.ToLower()
+          "$hash  MarketingAnalytics-win-x64.zip" | Set-Content -Encoding ASCII dist\SHA256SUMS.txt
 
       - name: Upload release package
         uses: actions/upload-artifact@v4
         with:
           name: MarketingAnalytics-win-x64
-          path: dist\MarketingAnalytics-win-x64.zip
+          path: |
+            dist\MarketingAnalytics-win-x64.zip
+            dist\SHA256SUMS.txt
           if-no-files-found: error
 
       - name: Create GitHub Release
@@ -57,5 +62,6 @@ jobs:
         run: >
           gh release create "$env:RELEASE_TAG"
           "dist\MarketingAnalytics-win-x64.zip#Marketing Analytics for Windows x64"
+          "dist\SHA256SUMS.txt#SHA-256 checksums"
           --title "Marketing Analytics $env:RELEASE_TAG"
           --generate-notes
