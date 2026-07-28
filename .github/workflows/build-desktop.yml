@@ -46,7 +46,7 @@ jobs:
           "$hash  MarketingAnalytics-win-x64.zip" | Set-Content -Encoding ASCII dist\SHA256SUMS.txt
 
       - name: Upload release package
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: MarketingAnalytics-win-x64
           path: |
