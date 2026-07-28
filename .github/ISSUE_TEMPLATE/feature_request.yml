@@ -1,0 +1,24 @@
+name: Предложение
+description: Предложить улучшение Marketing Analytics
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Какую задачу нужно решить?
+      placeholder: "Опишите рабочую ситуацию, а не только желаемую кнопку."
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Предлагаемое решение
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Возможные альтернативы
+    validations:
+      required: false

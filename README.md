@@ -87,6 +87,10 @@ Marketing Analytics запускает внутренние сервисы то�
 
 К каждому новому архиву Windows приложен файл `SHA256SUMS.txt`. Перед установкой можно сверить контрольную сумму по [короткой инструкции](RELEASE_VERIFICATION.md). Уведомления о сторонних компонентах собраны в [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), правила локальной обработки данных - в [PRIVACY.md](PRIVACY.md).
 
+## Участие в проекте
+
+Правила разработки и локальной проверки описаны в [CONTRIBUTING.md](CONTRIBUTING.md). История публичных изменений ведётся в [CHANGELOG.md](CHANGELOG.md).
+
 ## Автоматизация релизов
 
 Тег версии, например `v1.0.0`, запускает GitHub Actions. Workflow собирает Windows-пакет и прикладывает `MarketingAnalytics-win-x64.zip` как артефакт сборки.
